@@ -1,0 +1,29 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": null,
+      "title": "Node CPU Seconds Total",
+      "tags": [],
+      "timezone": "browser",
+      "schemaVersion": 16,
+      "version": 0,
+      "refresh": "5s",
+      "panels": [
+        {
+          "title": "CPU Usage",
+          "type": "graph",
+          "gridPos": { "x": 0, "y": 0, "w": 24, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_cpu_seconds_total",
+              "legendFormat": "{{instance}}",
+              "interval": "",
+              "refId": "A"
+            }
+          ]
+        }
+      ]
+    },
+    "overwrite": true
+  }
+  

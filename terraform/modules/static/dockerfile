@@ -1,0 +1,3 @@
+FROM nginx
+COPY ./static_files /shared_files/ 
+VOLUME /shared_files
