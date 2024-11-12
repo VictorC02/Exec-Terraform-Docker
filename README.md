@@ -61,31 +61,11 @@ terraform destroy
 ## 🔧 Ejecución de los Tests <a name = "tests"></a>
 
 
-### Persistencia de Datos
-Para asegurar que hay persistencia de datos tenemos que insertar los siguientes comandos:
-
-```
-terraform state rm docker_volume.db_data_volume
-```
-```
-terraform destroy
-```
-```
-terraform import docker_volume.db_data_volume postgres-data-volume
-```
-```
-terraform apply
-```
-
-Para comprobar que los datos persisten, simplemente tenemos que levantar los servicios usando "terraform apply", despues tendriamos que añadir algun elemento en la base de datos y seguidamente tumbar los servicios y contenedores usando los comandos anteriores.
-
-Al volver iniciar los contenedores, veremos como los datos de la base de datos siguen siendo los mismos.
-
 ### Monitorización Activa de la Aplicación
 
 Para comprobar que hay monitorización activa, simplemente tenemos que acceder a la dirección donde se encuentra Grafana (localhost:4000) o Prometheus (localhost:9090). 
 
-En Prometheus podemos ejecutar alguna query, como por ejemplo "", y veremos las métricas resultantes a esa query.
+En Prometheus podemos ejecutar alguna query, como por ejemplo "node_cpu_seconds_total", y veremos las métricas resultantes a esa query.
 
 ![Prometheus](/Exec-Terraform-Docker/images/prom.PNG)
 
