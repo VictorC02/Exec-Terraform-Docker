@@ -2,7 +2,7 @@
 
 ---
 
-<p align="center"> En este proyecto se intena desplegar una aplicación con varios servicios asociados, mediante el uso de las herramientas Docker y Terraform.
+<p align="center"> En este proyecto se intenta desplegar una aplicación con varios servicios asociados, mediante el uso de las herramientas Docker y Terraform.
     
 </p>
 
